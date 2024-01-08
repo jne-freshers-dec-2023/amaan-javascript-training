@@ -10,6 +10,8 @@ console.log(b[1]); //e
 const c = "Amaan Shaikh";
 console.log(c.charAt(2)); //a
 
+const name33 = "Aditya";
+
 const d = "Amaan Shaikh";
 console.log(d.length); //12
 
