@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 170px;
+      background-color: #f3efef;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      cursor: pointer;
+      color: black;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 30px;
+    }
+
+    .sidebar li:hover {
+      color: blue;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .card {
+      width: calc(100% - 30px);
+      height: 170px;
+      margin: 0 30px 30px 0;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin: 0;
+    }
+
+    .full-width-card {
+      width: 100%;
+      height: 370px;
+      margin-right: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li>Dashboard</li>
+        <li>Email</li>
+        <li>Calendar</li>
+        <li>Appointment</li>
+        <li>Doctors</li>
+        <li>Other Staff</li>
+        <li>Patients</li>
+        <li>Room Allotment</li>
+        <li>Payments</li>
+        <li>Widget</li>
+        <li>UI Elements</li>
+        <li>Material Elements</li>
+      </ul>
+    </div>
+    <div class="main-content">
+<div>
+    <div class="card">
+        <h3>New Patients</h3>
+      </div>
+
+      <div class="card">
+        <h3>Today's Operations</h3>
+      </div>
+
+</div>
+     <div>
+        <div class="card">
+            <h3>OPD Patients</h3>
+          </div>
+    
+          <div class="card">
+            <h3>Visitors</h3>
+          </div>
+     </div>
+
+      <div>
+        <div class="card full-width-card">
+        <h3>HOSPITAL SURVEY</h3>
+      </div></div>
+    </div>
+  </div>
+</body>
+</html>
