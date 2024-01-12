@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  gap: 10px;
+  row-gap: 10px;
+  column-gap: 20px;
+}
+/* flex example in css */
+.flex-example {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  height: 80px;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+#main-title {
+  font-size: 18px;
+  color: #7d7e7e;
+}
+#sub-title {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #9b9b9b;
+}
+
+/* grid in css */
+.grid-example {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.container {
+  justify-items: start; /* we also use following - end | center | stretch */
+}
+.container {
+  justify-content: start; /* end | center | stretch | space-around | space-between | space-evenly */
+}
+.container {
+  /* This creates a 2 x 2 grid. */
+  grid-template-columns: 60px 60px;
+  grid-template-rows: 90px 90px;
+}
+.container {
+  grid-auto-flow: row; /*colomn | colomn dence | row dence */
+}
+.item {
+  /*  This value applies to a grid item inside a single cell. */
+  justify-self: start; /* | end | center | stretch;*/
+}
+
+.item {
+  /* This value applies to the content inside a single grid item. */
+  align-self: start; /*| end | center | stretch */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .responsive-text {
+    font-size: 14px;
+  }
+}
+
+/* Position */
+.position-example {
+  position: relative;  /*static,fixed,sticky,absolute*/
+  top: 20px;
+  left: 30px;
+}
+
+/* Text Transitions and Animations */
+.text-transition {
+    transition: color 0.5s ease-in-out;
+  }
+
+  .text-transition:hover {
+    color: red;
+  }
+  /* Animation */
+  @keyframes text-animation {
+    0% {color: blue;}
+    25% {color: green;}
+    50% {color: yellow;}
+    75% {color: purple;}
+    100% {color: orange;}
+    }
+    .text-animate {
+        animation: text-animation 5s infinite;
+    }
+    .animated-text {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        }
+    /* Gradient in CSS */
+    /* for smooth transition between two or more colors we use Gradient */
+    .gradient-box {
+        background: linear-gradient(to right, #ff8c00, #ff2d55);
+      }
+
+      /* CSS Rounded Corner */
+      .rounded-corner {
+        border-radius: 20px;  /* we can also specify each corner using - border-radius: 15px 50px 30px 5px;*/
+      }      
+      /* CSS Border - images */
+      .border-image {
+        border: 4px solid transparent;
+      }
+            
