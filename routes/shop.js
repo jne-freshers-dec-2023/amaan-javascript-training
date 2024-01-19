@@ -4,13 +4,12 @@ const path = require('path');
 const express = require('express');
 
 const productController = require('../controllers/products');
+const shopController = require('../controllers/shop');
 
 // Create an Express Router
 const router = express.Router();
 
-router.get('/', shopController.getIndex);
-// GET request to /products 
-router.get('/products', shopController.index);
+router.get('/', shopController.getProducts);
 
 
 // Export the router for use in other files
