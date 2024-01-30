@@ -1,6 +1,7 @@
 // import React, { useState, useEffect, useCallback } from 'react';
 import UseRefHook from './components/UseRefHook';
 import User from './components/User';
+import Users from './components/Users';
 
 // import './App.css';
 
@@ -43,6 +44,7 @@ const App=()=> {
 
       <UseRefHook/>
       <User name="Amaan Shaikh" />
+      <Users/>
 
     </div>
   );
