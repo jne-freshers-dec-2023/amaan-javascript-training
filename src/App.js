@@ -1,5 +1,6 @@
 // import React, { useState, useEffect, useCallback } from 'react';
 import UseRefHook from './components/UseRefHook';
+import User from './components/User';
 
 // import './App.css';
 
@@ -41,6 +42,7 @@ const App=()=> {
       <button onClick={toggleParaHandler}>Toggle Paragraph!</button> */}
 
       <UseRefHook/>
+      <User name="Amaan Shaikh" />
 
     </div>
   );
