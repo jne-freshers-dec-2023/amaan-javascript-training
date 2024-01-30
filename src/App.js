@@ -1,4 +1,5 @@
 // import React, { useState, useEffect, useCallback } from 'react';
+import FetchAPI from './components/FetchAPI';
 import UseRefHook from './components/UseRefHook';
 import User from './components/User';
 import Users from './components/Users';
@@ -43,8 +44,9 @@ const App=()=> {
       <button onClick={toggleParaHandler}>Toggle Paragraph!</button> */}
 
       <UseRefHook/>
-      <User name="Amaan Shaikh" />
-      <Users/>
+      {/* <User name="Amaan Shaikh" /> */}
+      {/* <Users/> */}
+      <FetchAPI/>
 
     </div>
   );
