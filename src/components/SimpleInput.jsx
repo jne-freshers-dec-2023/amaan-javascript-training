@@ -2,12 +2,18 @@ import { useState } from "react";
 
 const SimpleInput = (props) => {
     const [name, setName] = useState('');
+    const [nameIsValid, setNameIsValid] = useState(true);
 
     const nameInputChangeHandler = (event)=>{
         setName(event.target.value)
     };
     const formSubmissionHandler=(event)=>{
         event.preventDefault();
+        if(name.trim() === ''){
+            setNameIsValid(false);
+            return;
+        }
+
         console.log(name);
     }
 
@@ -17,7 +23,9 @@ const SimpleInput = (props) => {
                 <label htmlFor="name">Your Name</label>
                 <input type="text" id="name" onChange={nameInputChangeHandler}/>
             </div>
+            {!nameIsValid && <p className="error-text">Name must not be empty</p> }
             <button type="submit">Submit</button>
+            
         </form>
 
     )
