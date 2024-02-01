@@ -4,6 +4,7 @@ import React, { useEffect,useState } from "react";
 const AvailableMeals = () => {
 
   const  [meals, setMeals] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(()=>{
     document.title="Available Meals"
@@ -18,17 +19,24 @@ const AvailableMeals = () => {
           ...data[key]
         })
         setMeals(loadedMeals);
+        setIsLoading(false);
       }
     }
     fetchMeals();
   },[]);
 
+  if(isLoading){
+    return (<section>
+      <p>Loading...</p>
+    </section>)
+  }
     const dummyMeals =  meals.map(meal=>{
         return (
             <li key={meal.id}>
                 <h2>{meal.name}</h2>
                 <h3>{meal.description}</h3>
-                <h4>{meal.price}</h4>        
+
+                <h4>${meal.price}</h4>        
             </li>
             
    ) });
