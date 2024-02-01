@@ -1,34 +1,29 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 
-const DUMMY_MEALS = [
-  {
-    id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22.99,
-  },
-  {
-    id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.5,
-  },
-  {
-    id: "m3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
-    price: 12.99,
-  },
-  {
-    id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
-    price: 18.99,
-  },
-];
 
 const AvailableMeals = () => {
-    const dummyMeals =  DUMMY_MEALS.map(meal=>{
+
+  const  [meals, setMeals] = useState([]);
+
+  useEffect(()=>{
+    document.title="Available Meals"
+    const fetchMeals = async () =>{
+      const res = await fetch('https://react-http-873cd-default-rtdb.firebaseio.com/meals.json');
+      const data = await res.json();
+
+      const loadedMeals = [];
+      for(let key in data){
+        loadedMeals.push({
+          id:key,
+          ...data[key]
+        })
+        setMeals(loadedMeals);
+      }
+    }
+    fetchMeals();
+  },[]);
+
+    const dummyMeals =  meals.map(meal=>{
         return (
             <li key={meal.id}>
                 <h2>{meal.name}</h2>
