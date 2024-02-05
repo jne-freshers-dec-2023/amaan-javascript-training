@@ -1,19 +1,23 @@
-import { legacy_createStore as createStore} from 'redux';
+import { legacy_createStore as createStore } from "redux";
 
-const  counterReducer = (state={counter:0},action)=>{
-        if(action.type === 'INC'){
-            return{
-                counter:state.counter+1,
-            };
-        }
-       if(action.type==='DEC'){
-            return{
-                counter: state.counter-1,
-            }
-}
-return state;
-}
+const counterReducer = (state = { counter: 0 }, action) => {
+  if (action.type === "INC") {
+    return {
+      counter: state.counter + 1,
+    };
+  }
+  if (action.type === "DEC") {
+    return {
+      counter: state.counter - 1,
+    };
+  }
+  if(action.type === "INCFIVE"){
+    return{
+        counter: state.counter + action.amount,
+    }
+  }
+
+  return state;
+};
 const store = createStore(counterReducer);
-export default store; 
-
-  
+export default store;
